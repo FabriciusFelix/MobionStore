@@ -1,0 +1,9 @@
+{
+    "editor.allowVariableFontsInAccessibilityMode": true,
+    "editor.unicodeHighlight.allowedCharacters": {
+        "*": true
+    },
+    "debug.allowBreakpointsEverywhere": true,
+    "git.allowForcePush": true,
+    "git.allowNoVerifyCommit": true
+}

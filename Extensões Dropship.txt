@@ -1,0 +1,8 @@
+PPSY(Quando vc entra em um site de drop, ele te dá insights):
+https://app.ppspy.com/ads?order_by=ad_started_at&direction=desc
+
+CopyCat(Saberquanto tempo um anuncio está no ar):
+https://copycat.intellabs.com.br/apps
+
+Tradutor rápido:
+https://chromewebstore.google.com/detail/tradutor-r%C3%A1pido/giibmkldpeehkleeoplcomfcemkjacim
