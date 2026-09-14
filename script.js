@@ -1,17 +1,21 @@
 // Mobion StealthGuard™ Interactive Logic
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Interactive 28-Degree Privacy Angle Simulator
+  // 1. Interactive 3D Phone Rotation & Privacy Angle Simulator
   const angleSlider = document.getElementById('angleSlider');
+  const phoneMockup = document.getElementById('phoneMockup');
   const simOverlay = document.getElementById('simOverlay');
   const simAngleText = document.getElementById('simAngleText');
   const statusBadge = document.getElementById('statusBadge');
 
-  if (angleSlider && simOverlay && simAngleText && statusBadge) {
+  if (angleSlider && phoneMockup && simOverlay && simAngleText && statusBadge) {
     angleSlider.addEventListener('input', (e) => {
       const angle = parseInt(e.target.value, 10);
       simAngleText.textContent = `${angle}°`;
       
+      // Physically rotate the phone mockup in 3D space
+      phoneMockup.style.transform = `rotateY(${angle * 1.25}deg) rotateX(${angle * 0.15}deg)`;
+
       // Calculate opacity: 0 opacity at 0°, 100% opacity at 28°+
       let opacity = 0;
       if (angle >= 5) {
@@ -19,16 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       simOverlay.style.opacity = opacity;
 
+      // Dynamic badge updates
       if (angle >= 28) {
-        statusBadge.textContent = '🔒 Screen Completely Black & Secret (100% Private)';
+        statusBadge.textContent = '🔒 Tela 100% Oculta e Privada (Ângulo 28°)';
         statusBadge.style.borderColor = '#00f2fe';
         statusBadge.style.color = '#00f2fe';
       } else if (angle > 10) {
-        statusBadge.textContent = '🛡️ Privacy Protection Active';
+        statusBadge.textContent = '🛡️ Proteção de Privacidade Ativando...';
         statusBadge.style.borderColor = '#38bdf8';
         statusBadge.style.color = '#38bdf8';
       } else {
-        statusBadge.textContent = '👁️ Direct Front View (100% Ultra HD Clear)';
+        statusBadge.textContent = '👁️ Visão Frontal Direta (100% HD Clear)';
         statusBadge.style.borderColor = '#22c55e';
         statusBadge.style.color = '#22c55e';
       }
@@ -50,32 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (timeRemaining <= 0) {
         clearInterval(timerInterval);
-        timerElement.textContent = '00:00 - OFFER EXTENDED';
+        timerElement.textContent = '00:00 - OFERTA PRORROGADA';
       } else {
         timeRemaining--;
       }
     }, 1000);
   }
 
-  // 3. Bundle Selection Card Logic
-  const bundleCards = document.querySelectorAll('.bundle-card');
-  const orderPriceDisplay = document.getElementById('orderPriceDisplay');
-
-  bundleCards.forEach((card) => {
-    card.addEventListener('click', () => {
-      bundleCards.forEach((c) => c.classList.remove('selected'));
-      card.classList.add('selected');
-      const radio = card.querySelector('input[type="radio"]');
-      if (radio) radio.checked = true;
-
-      const price = card.getAttribute('data-price');
-      if (orderPriceDisplay && price) {
-        orderPriceDisplay.textContent = `£${price}`;
-      }
-    });
-  });
-
-  // 4. FAQ Accordion Logic
+  // 3. FAQ Accordion Logic
   const faqQuestions = document.querySelectorAll('.faq-question');
 
   faqQuestions.forEach((q) => {
