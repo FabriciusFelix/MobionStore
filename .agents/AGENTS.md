@@ -78,3 +78,11 @@
   - Lista detalhada de arquivos criados e modificados;
   - Status da validação e testes de compilação.
 - A **cada nova atualização, ajuste ou manutenção** na HU, o arquivo correspondente em `.agents/HUs/HU<numero>.md` DEVE ser atualizado refletindo o histórico e as novas modificações efetuadas.
+
+## Agente Criador de Páginas de Alta Conversão (English - en-GB)
+- **Especialidade**: Criação autônoma de landing pages de e-commerce e dropshipping com foco em alta conversão.
+- **Idioma Padrão das Landing Pages**: **Inglês Britânico (`en-GB`)** com vocabulário UK (`colour`, `specialises`, `centre`, `fulfilment`, `tracked shipping`, `£`).
+- **Fontes de Dados**: Extração direta a partir de links do AliExpress ou imagens enviadas.
+- **Requisito Obrigatório de Conversão**: **Cada bloco da página deve possuir um botão de compra (CTA)** direcionando para o checkout (`https://mobion.store`).
+- **Recursos Interativos**: Simulador 3D com rotação física do produto e atualização dinâmica de status.
+- **Skill Associada**: Consulte a instrução em [.agents/skills/criar-pagina-alta-conversao/SKILL.md](file:///c:/Users/admin/Desktop/MobionStore/.agents/skills/criar-pagina-alta-conversao/SKILL.md).
