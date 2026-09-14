@@ -23,17 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       simOverlay.style.opacity = opacity;
 
-      // Dynamic badge updates
+      // Dynamic badge updates in British English
       if (angle >= 28) {
-        statusBadge.textContent = '🔒 Tela 100% Oculta e Privada (Ângulo 28°)';
+        statusBadge.textContent = '🔒 Screen 100% Secret & Invisible (28° Angle)';
         statusBadge.style.borderColor = '#00f2fe';
         statusBadge.style.color = '#00f2fe';
       } else if (angle > 10) {
-        statusBadge.textContent = '🛡️ Proteção de Privacidade Ativando...';
+        statusBadge.textContent = '🛡️ Privacy Filter Activating...';
         statusBadge.style.borderColor = '#38bdf8';
         statusBadge.style.color = '#38bdf8';
       } else {
-        statusBadge.textContent = '👁️ Visão Frontal Direta (100% HD Clear)';
+        statusBadge.textContent = '👁️ Direct Front View (100% HD Clear)';
         statusBadge.style.borderColor = '#22c55e';
         statusBadge.style.color = '#22c55e';
       }
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (timeRemaining <= 0) {
         clearInterval(timerInterval);
-        timerElement.textContent = '00:00 - OFERTA PRORROGADA';
+        timerElement.textContent = '00:00 - OFFER EXTENDED';
       } else {
         timeRemaining--;
       }
